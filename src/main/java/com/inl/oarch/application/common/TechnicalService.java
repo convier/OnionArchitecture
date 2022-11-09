@@ -1,8 +1,8 @@
-package com.inl.oarch.usecase.common;
+package com.inl.oarch.application.common;
 
 import java.util.Date;
 
-import com.inl.oarch.usecase.BusinessException;
+import com.inl.oarch.application.BusinessException;
 
 public interface TechnicalService {
 	

@@ -1,4 +1,4 @@
-package com.inl.oarch.model;
+package com.inl.oarch.domain.model;
 
 import java.util.Date;
 

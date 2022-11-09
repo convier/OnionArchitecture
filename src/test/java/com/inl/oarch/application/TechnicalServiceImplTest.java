@@ -1,4 +1,4 @@
-package com.inl.oarch.usecase;
+package com.inl.oarch.application;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -17,23 +17,22 @@ import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.inl.oarch.dao.CarDAO;
-import com.inl.oarch.dao.ServiceDAO;
-import com.inl.oarch.model.Car;
-import com.inl.oarch.model.Service;
-import com.inl.oarch.usecase.common.TechnicalService;
+import com.inl.oarch.application.common.TechnicalService;
+import com.inl.oarch.domain.model.Car;
+import com.inl.oarch.domain.model.Service;
+import com.inl.oarch.domain.service.CarRepository;
+import com.inl.oarch.domain.service.ServiceRepository;
 
 public class TechnicalServiceImplTest {
 
-	private CarDAO carDAO;
-	private ServiceDAO serviceDAO;
-
+	private CarRepository carDAO;
+	private ServiceRepository serviceDAO;
 	private TechnicalService technicalService;
 	
 	@BeforeEach
 	public void setUp() {
-		carDAO = mock(CarDAO.class);
-		serviceDAO = mock(ServiceDAO.class);
+		carDAO = mock(CarRepository.class);
+		serviceDAO = mock(ServiceRepository.class);
 		technicalService = new TechnicalServiceImpl(carDAO, serviceDAO);
 	}
 

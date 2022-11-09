@@ -1,4 +1,4 @@
-package com.inl.oarch.usecase;
+package com.inl.oarch.application;
 
 public class BusinessException extends Throwable {
 	
